@@ -38,7 +38,7 @@ echo "$($PSQL "SELECT DISTINCT name FROM teams RIGHT JOIN games ON teams.team_id
 
 
 echo -e "\nYear and team name of all the champions:"
-echo "$($PSQL "SELECT name, year FROM teams RIGHT JOIN games ON teams.team_id = games.winner_id WHERE round='Final' ORDER BY year")"
+echo "$($PSQL "SELECT year, name FROM teams RIGHT JOIN games ON teams.team_id = games.winner_id WHERE round='Final' ORDER BY year")"
 
 
 echo -e "\nList of teams that start with 'Co':"
